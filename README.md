@@ -1,8 +1,15 @@
-# Project Template
+# Mechanisms of Differentiation in Platelet Formation via GRN Inference
 
-A template for bioinformatics workflows for the Forsberg lab. Replace this with a short description of whatever analysis is going on here. Created by Akash Pandit.
+A differential analysis of pySCENIC-inferred gene regulatory networks across MkP differentation pathways.
 
-- [Project Template](#project-template)
+### Background
+
+[Poscablo et. al. 2024](https://doi.org/10.1016/j.cell.2024.04.018) demonstrated that there exists an age-dependent platelet differentiation pathway in mice that branch off of the HSC root cell type (completely seperate from the rest of the hematopoietic tree). These aberrant platelets, dubbed 'non-canonical' platelets, are both produced and clot more aggressively, leading to greater risk of cardiac disease. 
+
+In this analysis, the python package [pySCENIC](https://pyscenic.readthedocs.io/en/latest/) is used to infer regulatory relationships between transcription factors in old canonical and old non-canonical megakaryocyte progenitors (MkPs), a cell type that exists upstream of all platelets. Gene regulatory networks (GRNs) are inferred for each 'canon', visible through 'regulons' appended to the input experimental AnnData object with networks directly visible in [Cytoscape](https://cytoscape.org). 
+
+- [Mechanisms of Differentiation in Platelet Formation via GRN Inference](#mechanisms-of-differentiation-in-platelet-formation-via-grn-inference)
+    - [Background](#background)
   - [Prerequisites](#prerequisites)
   - [Setup](#setup)
 
