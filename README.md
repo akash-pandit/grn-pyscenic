@@ -23,6 +23,8 @@ Basic BASH shell proficiency is assumed. Mac users, this is built-in to your ter
 
 3. **uv**: Our Python package manager. Ensures that code runs the same way, no matter the machine. [Install it here](https://docs.astral.sh/uv/getting-started/installation/).
 
+4. (optionally) **docker**: If 
+
 ## Setup
 
 To clone (download) this repository's contents, navigate to your parent directory of choice and run:
@@ -35,6 +37,17 @@ To download all python dependencies and configure your environment, run:
 ```bash
 uv sync  # yeah, its that easy.
 ```
+
+To download pySCENIC's necessary genome feature and motif databases, run the following from the project root:
+```bash
+bash scripts/download_mm10_databases.sh
+```
+<!-- If running the above fails (only tested on Linux, known to fail on Windows), run it in a dedicated environment with the following docker commands:
+```bash
+docker build -t download-mm10-dbs -f docker/Dockerfile .  # . (or last path arg) should be project root
+docker run --rm -v .:/app download-mm10-dbs 
+``` -->
+
 
 **For Jupyter users:** Launch jupyter with `uv` to ensure it uses the correct environment and navigate to one of the given URLs:
 ```bash
